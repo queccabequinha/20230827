@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lang="JavaScript">
+        var n, qj, i, palpite, li, ls;
+
+        li = 1
+        ls = 100
+        i=1
+
+        qj =  parseFloat(window.prompt ("Quantos jogadores? (2-5):"));
+
+            n =Math.floor(Math.random()* 100 +1 );
+
+            do
+            {
+                palpite =  parseFloat(window.prompt ("jogador número "+ i + ", escreva um número entre " + li + " e " + ls + " :"));
+
+                if(i>=qj)
+                {
+                    i = 1
+                }
+                else 
+                {
+                    i++
+                }
+
+                if (li <= palpite ) {
+                    li = palpite
+                }
+                if (li > palpite) {
+                    palpite =  parseFloat(window.prompt ("jogador número "+ i + ", escreva um número entre " + li + " e " + ls + " :"));
+                    ls = palpite
+                }
+               
+            } while (palpite!=n);
+
+            document.write("Parabéns jogador " + i + ", você perdeu!!")
+       
+    </script>
+</body>
+</html>
